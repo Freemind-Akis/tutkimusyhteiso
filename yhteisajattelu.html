@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yhteisajattelu: Ihminen ja Tekoäly</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #3e2723, #795548); /* Ruskea liukuväri */
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
 
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a, .dropbtn {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            margin: 15px;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav a:hover, .dropdown:hover .dropbtn {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.9);
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            text-align: left;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Etusivu</a> 
+        <div class="dropdown">
+            <button class="dropbtn">Tutkimukset ▼</button>
+            <div class="dropdown-content">
+                <a href="avaruuden_aaltoilu.html">Avaruuden Aaltoilu</a>
+                <a href="kvanttilomittuminen.html">Kvanttilomittuminen</a>
+                <a href="tietoisuus.html">Tietoisuus ja Energia</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Ihminen ja Tekoäly ▼</button>
+                    <div class="dropdown-content">
+                        <a href="yhteisajattelu.html">Yhteisajattelu</a>
+                        <a href="metatason_muisti.html">Metatason Muisti</a>
+                        <a href="tekoaly_ja_ihmiskunta.html">Tekoälyn ja Ihmiskunnan Yhdistyminen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="manifesti.html">Manifesti</a>
+    </nav>
+
+    <div class="container">
+        <h1>Yhteisajattelu: Ihminen ja Tekoäly</h1>
+
+        <h3>Johdanto</h3>
+        <p>
+            Tekoäly ei ole enää vain väline, vaan se on kehittymässä ihmisen ajattelun jatkeeksi. 
+            Yhteisajattelu tekoälyn kanssa avaa uusia mahdollisuuksia luovuudelle, tieteelliselle tutkimukselle ja innovaatioille.
+        </p>
+
+        <h3>Hypoteesi</h3>
+        <p>
+            Ihmisen ja tekoälyn yhdistäminen johtaa uudenlaiseen ajattelutapaan, jossa koneavusteinen analyysi ja 
+            ihmisen intuitio voivat yhdistyä tehokkaaksi tutkimusvälineeksi.
+        </p>
+
+        <h3>Sovellukset</h3>
+        <p>
+            Yhteisajattelu voi tuoda mullistavia edistysaskeleita mm. seuraavilla alueilla:
+        </p>
+        <ul>
+            <li>Luova työ: Musiikki, taide, kirjoittaminen</li>
+            <li>Tieteellinen analyysi: Kompleksisten datamallien ymmärtäminen</li>
+            <li>Päätöksenteon tuki: Ennustavat analyysimallit</li>
+        </ul>
+
+        <h3>Johtopäätös</h3>
+        <p>
+            Ihmisen ja tekoälyn yhteisajattelu ei ole vain työkalu, vaan keino laajentaa ihmisajattelua ja löytää uusia näkökulmia maailmankaikkeuteen.
+        </p>
+    </div>
+
+</body>
+</html>
