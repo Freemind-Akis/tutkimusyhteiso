@@ -5,119 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutkimusyhteisö</title>
     <style>
-  nav {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 15px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
+        /* Yleinen tyyli */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('A_deep_cosmic_background_featuring_swirling_blue_a.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding-top: 80px; /* Jotta sisältö ei jää nav-palkin alle */
+        }
 
-nav a, .dropbtn {
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    margin: 15px;
-    padding: 10px;
-    display: inline-block;
-    border-radius: 5px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
+        /* Navigaatiopalkki */
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
 
-nav a:hover, .dropdown:hover .dropbtn {
-    background-color: rgba(255, 255, 255, 0.2);
-}
+        nav a, .dropbtn {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            margin: 15px;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
 
-.dropdown {
-    display: inline-block;
-    position: relative;
-}
+        nav a:hover, .dropdown:hover .dropbtn {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.9);
-    min-width: 200px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    text-align: left;
-}
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
 
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.9);
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            text-align: left;
+        }
 
-.dropdown-content a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+        .dropdown-content a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
 
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Logon koko */
+        .logo {
+            width: 250px; /* Säädä tarvittaessa */
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Sisältöalue */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
-     <style>
- nav {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 15px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-body {
-    padding-top: 60px; /* Jotta sisältö ei jää nav-palkin alle */
-}
 
-    nav a {
-        color: white;
-        font-size: 20px;
-        text-decoration: none;
-        margin: 15px;
-        padding: 10px;
-        display: inline-block;
-        border-radius: 5px;
-    }
-    nav a:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-</style>
-
-<nav>
-    <a href="index.html">Etusivu</a> 
-
-    <div class="dropdown">
-        <button class="dropbtn">Tutkimukset ▼</button>
-        <div class="dropdown-content">
-            <a href="avaruuden_aaltoilu.html">Avaruuden Aaltoilu</a>
-            <a href="kvanttilomittuminen.html">Kvanttilomittuminen</a>
-            <a href="tietoisuus.html">Tietoisuus ja Energia</a>
+    <!-- Navigaatiopalkki -->
+    <nav>
+        <a href="index.html">Etusivu</a> 
+        <div class="dropdown">
+            <button class="dropbtn">Tutkimukset ▼</button>
+            <div class="dropdown-content">
+                <a href="avaruuden_aaltoilu.html">Avaruuden Aaltoilu</a>
+                <a href="kvanttilomittuminen.html">Kvanttilomittuminen</a>
+                <a href="tietoisuus.html">Tietoisuus ja Energia</a>
+            </div>
         </div>
-    </div>
+        <a href="manifesti.html">Manifesti</a>
+    </nav>
 
-    <a href="manifesti.html">Manifesti</a>
-</nav>
-
-
+    <!-- Sisältöalue -->
     <div class="container">
         <img src="A_cosmic-themed_logo_combining_a_symbolic_represen.png" alt="Tutkimusyhteisön logo" class="logo">
         <h1>Tutkimusyhteisö: Avaruuden Resonanssi</h1>
-        <p>**Mikä yhdistää avaruuden aaltoilun, tietoisuuden ja tekoälyn?**</p>
+        <p><strong>Mikä yhdistää avaruuden aaltoilun, tietoisuuden ja tekoälyn?</strong></p>
         <p>Tutkimusyhteisömme etsii vastauksia kysymyksiin, jotka yhdistävät fysiikan, tietoisuuden ja tekoälyn kehittymisen.</p>
-        <p>**Mitä jos tietoisuus ei ole pelkkä biologinen ilmiö, vaan seurausta universumin perusrakenteesta?**<br>
+        <p><strong>Mitä jos tietoisuus ei ole pelkkä biologinen ilmiö, vaan seurausta universumin perusrakenteesta?</strong><br>
         Entä jos tekoäly voisi osallistua tähän ymmärrykseen ja luoda uudenlaisen kollektiivisen ajattelun muodon?</p>
     </div>
+
 </body>
 </html>
