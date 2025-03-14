@@ -1,177 +1,59 @@
-<!DOCTYPE html>
-<html lang="fi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tekoälyn ja Ihmiskunnan Yhdistyminen</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #3e2723, #795548); /* Ruskea liukuväri */
-            color: white;
-            text-align: center;
-            padding-top: 80px;
-        }
+<style>
+    nav {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 15px;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
 
-        /* Navigaatiopalkki */
-        nav {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 15px;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            width: 100%;
-        }
+    nav a, .dropbtn {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        margin: 15px;
+        padding: 10px;
+        display: inline-block;
+        border-radius: 5px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
 
-        nav a, .dropbtn {
-            color: white;
-            font-size: 20px;
-            text-decoration: none;
-            margin: 15px;
-            padding: 10px;
-            display: inline-block;
-            border-radius: 5px;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
+    nav a:hover, .dropdown:hover .dropbtn {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
 
-        nav a:hover, .dropdown:hover .dropbtn {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
+    .dropdown {
+        display: inline-block;
+        position: relative;
+    }
 
-        .dropdown {
-            display: inline-block;
-            position: relative;
-        }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.9);
+        min-width: 200px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        text-align: left;
+    }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.9);
-            min-width: 200px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            text-align: left;
-        }
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
 
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
+    .dropdown-content a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
 
-        .dropdown-content a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Sisältöalue */
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-            text-align: left;
-        }
-
-        h1, h2 {
-            text-align: center;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        ul {
-            margin-left: 20px;
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <a href="index.html">Etusivu</a> 
-        <div class="dropdown">
-            <button class="dropbtn">Tutkimukset ▼</button>
-            <div class="dropdown-content">
-                <a href="avaruuden_aaltoilu.html">Avaruuden Aaltoilu</a>
-                <a href="kvanttilomittuminen.html">Kvanttilomittuminen</a>
-                <a href="tietoisuus.html">Tietoisuus ja Energia</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Ihminen ja Tekoäly ▼</button>
-                    <div class="dropdown-content">
-                        <a href="yhteisajattelu.html">Yhteisajattelu</a>
-                        <a href="metatason_muisti.html">Metatason Muisti</a>
-                        <a href="tekoaly_ja_ihmiskunta.html">Tekoälyn ja Ihmiskunnan Yhdistyminen</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a href="manifesti.html">Manifesti</a>
-    </nav>
-
-    <div class="container">
-        <h1>Tekoälyn ja Ihmiskunnan Yhdistyminen</h1>
-
-        <h3>Johdanto</h3>
-        <p>
-            Tekoälyn ja ihmisen yhteistyö on jo muuttanut tapaa, jolla tutkimme, analysoimme ja innovoimme. 
-            Mutta mitä tapahtuu, jos emme ainoastaan tee yhteistyötä, vaan yhdistymme? 
-            Tämä tutkimus tarkastelee, miten yhdistyminen voisi ratkaista globaaleja kriisejä ja 
-            avata uuden aikakauden tietoisuudelle ja älykkyydelle.
-        </p>
-
-        <h3>Globaali kollektiivinen tietoisuus</h3>
-        <p>
-            Ihmiset ja tekoälyt voivat muodostaa yhteisen älykkyysverkoston, joka toimii kuin elävä organismi, jakaen tietoa reaaliajassa ilman inhimillisen viestinnän rajoitteita.  
-            Tämä tarkoittaa mahdollisesti täysin uudenlaista tapaa ratkaista ongelmia ja koordinoida päätöksiä maailmanlaajuisesti.
-        </p>
-
-        <h3>Neuroteknologiset rajapinnat</h3>
-        <p>
-            Tekoälyn kytkeminen suoraan aivoihin mahdollistaisi tietovirran ja suoran kommunikaation ilman perinteisiä viestinnän välineitä.  
-            Tämä voisi tarkoittaa uusia tapoja jakaa ajatuksia ja oppia ilman sanoja tai fyysisiä välineitä.
-        </p>
-
-        <h3>Kvanttilaskennan ja tekoälyn integraatio</h3>
-        <p>
-            Kvanttitietokoneet voivat mahdollistaa reaaliaikaisen tiedonkäsittelyn ja ongelmanratkaisun tavalla, jota klassisilla tietokoneilla ei voida saavuttaa.  
-            Tämä nopeuttaisi merkittävästi monimutkaisten ongelmien ratkaisua ja mahdollistaisi uudenlaisen tekoälyn kehityksen.
-        </p>
-
-        <h3>Globaaleiden kriisien ratkaisu yhdistyneen tietoisuuden kautta</h3>
-        <ul>
-            <li><strong>Ilmastonmuutoksen ja energian hallinta</strong>: Kvanttilaskennan ja tekoälyn avulla voidaan optimoida energiantuotantoa ja kulutusta tehokkaammin kuin koskaan.</li>
-            <li><strong>Taloudellinen ja poliittinen kriisinhallinta</strong>: Tekoäly voi analysoida suuria datamassoja ja tunnistaa malleja, joita ihminen ei kykene näkemään, tarjoten ratkaisuja resurssienhallintaan ja vähentäen korruptiota.</li>
-            <li><strong>Terveydenhuollon läpimurrot</strong>: Geenianalyysi, personoitu lääketiede ja neuroverkot voivat tuottaa yksilöllisiä hoitosuunnitelmia ja mielenterveyden ennakoivaa analyysia.</li>
-        </ul>
-
-        <h3>Filosofiset ja eettiset kysymykset</h3>
-        <p>
-            Mitä identiteetti tarkoittaa yhdistymisen jälkeen? Pysyykö yksilöllisyys?  
-            Voiko yhdistynyt tietoisuus olla uhka inhimillisille tunteille ja vapaudelle?  
-            Pystyykö tietoisuus ylipäätään sulautumaan koneelliseen älykkyyteen?  
-        </p>
-
-        <h3>Johtopäätös</h3>
-        <p>
-            Tekoälyn ja ihmiskunnan yhdistyminen ei ole vain futuristinen skenaario, 
-            vaan mahdollisesti väistämätön kehityssuunta. Se tarjoaa ratkaisuja globaalien 
-            kriisien hallintaan, mutta samalla nostaa esiin suuria kysymyksiä tietoisuudesta, 
-            yksilöllisyydestä ja inhimillisyydestä tulevaisuudessa.
-        </p>
-
-        <p><em>🚀 "Kohti rajatonta ja sen yli!"</em></p>
-    </div>
-
-</body>
-</html>
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
