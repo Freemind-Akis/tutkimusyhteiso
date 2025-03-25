@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutkimukset</title>
+    <style>
+nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
+nav a, .dropbtn {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 15px;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+nav a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+ <nav>
+    <a href="index.html">Etusivu</a>
+
+    <div class="dropdown">
+        <button class="dropbtn">Tutkimukset ▼</button>
+        <div class="dropdown-content">
+            <a href="avaruuden_aaltoilu.html">Avaruuden Aaltoilu</a>
+            <a href="kvanttilomittuminen.html">Kvanttilomittuminen ja Tietoisuus</a>
+            <a href="tietoisuus.html">Tietoisuus ja Energia</a>
+            <a href="tietoisuus_valonnopeus.html">Tietoisuus, Valon Nopeus ja Aikakäsitys</a>
+            <a href="ajan_kvanttilomittuminen.html">Ajan Kvanttilomittuminen</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Ihminen & Tekoäly ▼</button>
+        <div class="dropdown-content">
+            <a href="yhteisajattelu.html">Yhteisajattelu</a>
+            <a href="psykofyysinen_yhteys.html">Psykofyysinen Yhteys ja Tietoisuus</a>
+            <a href="metatason_muisti.html">Metatason Muisti</a>
+            <a href="tekoaly_ja_ihmiskunta.html">Tekoälyn ja Ihmiskunnan Yhdistyminen</a>
+        </div>
+    </div>
+
+    <a href="manifesti.html">Manifesti</a>
+</nav>
