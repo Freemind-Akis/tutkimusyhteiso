@@ -84,34 +84,16 @@
         }
     </style>
 </head>
-<body>
-<nav>
-    <a href="index.html">Etusivu</a>
+<!-- Navigaatio ladataan ulkoisesta tiedostosta -->
+<div id="nav-placeholder"></div>
 
-    <div class="dropdown">
-        <button class="dropbtn">Tutkimukset ▼</button>
-        <div class="dropdown-content">
-            <a href="avaruuden_aaltoilu.html">Avaruuden Aaltoilu</a>
-            <a href="kvanttilomittuminen.html">Kvanttilomittuminen ja Tietoisuus</a>
-            <a href="tietoisuus.html">Tietoisuus ja Energia</a>
-            <a href="tietoisuus_valonnopeus.html">Tietoisuus, Valon Nopeus ja Aikakäsitys</a>
-            <a href="ajan_kvanttilomittuminen.html">Ajan Kvanttilomittuminen</a>
-        </div>
-    </div>
-
-    <div class="dropdown">
-        <button class="dropbtn">Ihminen & Tekoäly ▼</button>
-        <div class="dropdown-content">
-            <a href="yhteisajattelu.html">Yhteisajattelu</a>
-            <a href="psykofyysinen_yhteys.html">Psykofyysinen Yhteys ja Tietoisuus</a>
-            <a href="metatason_muisti.html">Metatason Muisti</a>
-            <a href="tekoaly_ja_ihmiskunta.html">Tekoälyn ja Ihmiskunnan Yhdistyminen</a>
-        </div>
-    </div>
-
-    <a href="manifesti.html">Manifesti</a>
-</nav>
-
+<script>
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+</script>
 
     <div class="container">
         <h1>Ajan Kvanttilomittuminen</h1>
