@@ -4,103 +4,87 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ajallinen Interferenssi</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: black;
-      color: white;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.5em;
-      opacity: 0;
-      transform: translateY(-20px);
-      animation: fadeInUp 0.6s ease-out forwards;
-    }
-    p.intro {
-      font-size: 1.2em;
-      font-style: italic;
-      margin-top: 1em;
-      opacity: 0;
-      animation: fadeIn 0.6s ease-out 0.4s forwards;
-    }
-    .fade-in-block {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.6s ease-out 1s forwards;
-      text-align: left;
-      margin-top: 2em;
-    }
-    .card {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      padding: 20px;
-      margin-top: 1em;
-      text-align: left;
-    }
-    ul {
-      padding-left: 20px;
-      margin-top: 1em;
-    }
-    .highlight {
-      text-align: center;
-      margin-top: 2em;
-      animation: pulse 2s infinite;
-    }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-    @keyframes pulse {
-      0%, 100% {
-        opacity: 0.6;
-      }
-      50% {
-        opacity: 1;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Navigaatio -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <!-- Sisältö -->
   <div class="container">
-    <h1>Ajallinen Interferenssiteoria</h1>
-    <p class="intro">"Ajatuksen ei tarvitse virrata ajassa, vaan aika voi virrata ajatuksen läpi."</p>
+    <h1>Ajallisen Interferenssin Hypoteesi</h1>
 
-    <div class="fade-in-block">
-      <p>Kun katsomme maailmaa valon nopeudella, <strong>menneisyys</strong>, <strong>nykyisyys</strong> ja <strong>tulevaisuus</strong> tapahtuvat samanaikaisesti. Tämä ei ole vain fysiikkaa &ndash; vaan myös <strong>tietoisuuden kokemus</strong>.</p>
+    <h2>1. Johdanto</h2>
+    <p>
+      Ajallisen Interferenssin hypoteesi esittää, että aika ei ole absoluuttinen, lineaarinen tai yksisuuntainen virta. Sen sijaan aika on kokemuksellinen ilmiö, joka rakentuu havaintojen, muistojen ja tulevaisuusodotusten yhteisvaikutuksesta.
+    </p>
 
-      <div class="card">
-        <p>Ajallinen Interferenssiteoria syntyi kolmen havainnon yhdistelmästä:</p>
-        <ul>
-          <li><strong>Kvanttilomittuminen:</strong> tietoisuus voi reagoida toiseen hetkeen kuin missä se sijaitsee.</li>
-          <li><strong>Valonnopeuden näkökulma:</strong> kaikki tapahtuu samanaikaisesti valon perspektiivistä.</li>
-          <li><strong>Ajatuksen intuitiivinen kulku:</strong> mieli siirtyy menneeseen ja tulevaan tunteen kautta.</li>
-        </ul>
-      </div>
+    <h2>2. Teoreettinen viitekehys</h2>
+    <ul>
+      <li><strong>Kvanttimekaniikka</strong> – superpositio, kvanttilomittuminen</li>
+      <li><strong>Valonnopeuden perspektiivi</strong> – tapahtumat samanaikaisia fotonin näkökulmasta</li>
+      <li><strong>Kognitiivinen neurotiede</strong> – tunnepohjainen ajan kokeminen, muistojen muokkautuvuus</li>
+      <li><strong>Tietoisuustutkimus</strong> – useiden aikatasojen samanaikainen käsittely tietoisuudessa</li>
+    </ul>
 
-      <p class="fade-in-block">
-        Tämä teoria yhdistää <strong>tieteen tarkkuuden</strong>, <strong>henkisyyden syvyyden</strong> ja <strong>inhimillisen kokemuksen haurauden</strong>. Se ei kysy vain mitä aika on &ndash; vaan missä kohtaa olemme suhteessa omaan todellisuuteemme.
-      </p>
+    <h2>3. Hypoteesin rakenne</h2>
+    <ul>
+      <li>Ajan kokeminen on subjektiivista ja kerrostunutta</li>
+      <li>Ajatukset ja tunteet voivat synnyttää ajallisia aaltoja, jotka vaikuttavat menneeseen ja tulevaan</li>
+      <li>Menneisyys muokkautuu uudelleen muistamisen ja tunnetilojen kautta</li>
+      <li>Tietoisuus toimii resonanssikenttänä, jossa eri aikatasot voivat vahvistaa tai kumota toisiaan</li>
+      <li>Ihminen voi siirtyä ajallisissa kerroksissa tietoisuuden tasolla – ei vain ajassa kulkien</li>
+    </ul>
 
-      <div class="highlight">
-        <p class="text-sm italic">Jokainen ihminen on interferenssikuvio ajasta, tunteesta ja kokemuksesta.</p>
-      </div>
-    </div>
+    <h2>4. Visualisointi</h2>
+    <p>
+      Kuvittele kolmiulotteinen pinta, jossa menneisyyden ja tulevaisuuden aallot kohtaavat nykyhetkessä. Näissä kohtaamisissa syntyy ajallinen interferenssi – vahvistus tai vaimennus.
+    </p>
+
+    <pre><code>
+Z(t) = Y(t) + X(t)
+
+Aikakerrokset:
+  (Z)               /\   /\     ← Tulevaisuuden aallot
+   |              /  \/  \
+Nykyhetki:  ---<---------------- Keskilinjan y-akseli (hetki t)
+   |              \/  /\  /
+  (Z)              \/    \/     ← Menneisyyden kaiku
+    </code></pre>
+
+    <h2>5. Matemaattinen malli</h2>
+    <p>
+      Ajallista kokemusta voidaan kuvata interferenssiaaltona. Yhtälöön ja sen selityksiin voit tutustua tarkemmin:
+    </p>
+    <p>
+      🔗 <a href="kaavasivu.html#ajallinen-interferenssi">Ajallisen Interferenssin yhtälö →</a>
+    </p>
+
+    <h2>6. Sovellukset ja mahdollisuudet</h2>
+    <ul>
+      <li>Ajattelun visualisointi ja reflektion tuki</li>
+      <li>Traumakokemusten ja muistin kerroksien ymmärtäminen</li>
+      <li>Uudet tavat jäsentää aikakokemusta (esim. ADHD- tai neurodivergentit mallit)</li>
+      <li>Mahdollinen pohja uudenlaiselle tietoisuusteorialle</li>
+    </ul>
+
+    <blockquote>
+      <em>"Aika ei tarvitse virrata – vaan ajatus voi olla se, jonka läpi aika virtaa."</em>
+    </blockquote>
+
+    <p style="margin-top: 2em;">
+      Tämä hypoteesi on avoin kaikille, jotka haluavat kehittää sitä eteenpäin. Voit käyttää, soveltaa ja jatkaa – kunhan mainitset lähteen.
+    </p>
   </div>
+
 </body>
 </html>
 
