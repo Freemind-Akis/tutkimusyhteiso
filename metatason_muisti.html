@@ -1,33 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metatason muisti</title>
-    <style>
-  <link rel="stylesheet" href="style.css" />
-    </style>
+    
+   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metatason muisti</title>
+      <link rel="stylesheet" href="style.css" />
+
+    
 </head>
-<body>
-
-
-
-
-    <!-- Navigaatiopalkki -->
-<!-- Navigaatio -->
+    <body>
+<!-- Navigaatio ladataan ulkoisesta tiedostosta -->
 <div id="nav-placeholder"></div>
+
 <script>
-  fetch('nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
-    });
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
 </script>
 
-
-
-
+    <div class="container">
+    </div>
+        </body>
     <!-- Sisältöalue -->
     <div class="container">
         <h1>Metatason Muisti</h1>
