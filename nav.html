@@ -1,41 +1,39 @@
-<!-- nav.html -->
-<nav class="navbar">
-  <div class="logo">
-    <a href="index.html">
-      <img src="logo_tutkimusyhteiso.png" alt="Logo" style="height: 40px;" />
-    </a>
-  </div>
+<div class="navbar">
+  <img src="logo_tutkimusyhteiso.png" alt="Logo" class="logo-small" />
 
-  <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
-    ☰
-  </button>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-  <ul class="nav-links">
+  <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Etusivu</a></li>
 
     <li class="dropdown">
-      <a href="#">Tutkimukset ▾</a>
-      <ul class="dropdown-content">
-        <li><a href="avaruuden_aaltoilu.html">Avaruuden Aaltoilu</a></li>
-        <li><a href="kvanttilomittuminen.html">Kvanttilomittuminen ja Tietoisuus</a></li>
-        <li><a href="tietoisuus.html">Tietoisuus ja Energia</a></li>
-        <li><a href="tietoisuus_valonnopeus.html">Tietoisuus, Valon Nopeus ja Aikakäsitys</a></li>
-        <li><a href="ajan_kvanttilomittuminen.html">Ajan Kvanttilomittuminen</a></li>
-        <li><a href="ajallinen_interferenssi.html">Ajallinen Interferenssi</a></li>
-      </ul>
+      <button class="dropbtn">Tutkimukset ▼</button>
+      <div class="dropdown-content">
+        <a href="avaruuden_aaltoilu.html">Avaruuden Aaltoilu</a>
+        <a href="kvanttilomittuminen.html">Kvanttilomittuminen ja Tietoisuus</a>
+        <a href="tietoisuus.html">Tietoisuus ja Energia</a>
+        <a href="tietoisuus_valonnopeus.html">Valonnopeus ja Aikakäsitys</a>
+        <a href="ajan_kvanttilomittuminen.html">Ajan Kvanttilomittuminen</a>
+        <a href="ajallinen_interferenssi.html">Ajallinen Interferenssi</a>
+      </div>
     </li>
 
     <li class="dropdown">
-      <a href="#">Ihminen & Tekoäly ▾</a>
-      <ul class="dropdown-content">
-        <li><a href="yhteisajattelu.html">Yhteisajattelu</a></li>
-        <li><a href="psykofyysinen_yhteys.html">Psykofyysinen Yhteys ja Tietoisuus</a></li>
-        <li><a href="metatason_muisti.html">Metatason Muisti</a></li>
-        <li><a href="tekoaly_ja_ihmiskunta.html">Tekoälyn ja Ihmiskunnan Yhdistyminen</a></li>
-      </ul>
+      <button class="dropbtn">Ihminen & Tekoäly ▼</button>
+      <div class="dropdown-content">
+        <a href="yhteisajattelu.html">Yhteisajattelu</a>
+        <a href="psykofyysinen_yhteys.html">Psykofyysinen Yhteys</a>
+        <a href="metatason_muisti.html">Metatason Muisti</a>
+        <a href="tekoaly_ja_ihmiskunta.html">Tekoälyn Yhdistyminen</a>
+      </div>
     </li>
 
     <li><a href="manifesti.html">Manifesti</a></li>
   </ul>
-</nav>
+</div>
 
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
