@@ -1,4 +1,4 @@
-/* --- YLEINEN TYYLI --- */
+/* Yleinen tyyli */
 body {
   font-family: Arial, sans-serif;
   background-image: url('./blackhole_background.png');
@@ -6,11 +6,12 @@ body {
   background-position: center;
   background-attachment: fixed;
   color: white;
-  margin: 0;
+  text-align: center;
   padding-top: 80px;
+  margin: 0;
 }
 
-/* Navigaatiopalkki */
+/* Navigaatio */
 .navbar {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 20px;
@@ -23,27 +24,24 @@ body {
   justify-content: space-between;
 }
 
-/* Logo vasemmalle */
-.navbar .logo-small {
+.logo-small {
   width: 40px;
   height: auto;
 }
 
-/* Sämpylä / menu-nappi */
 .menu-toggle {
   display: none;
   background: none;
   border: none;
-  font-size: 28px;
+  font-size: 26px;
   color: white;
   cursor: pointer;
 }
 
-/* Linkkilista */
 .nav-links {
   display: flex;
-  gap: 20px;
   list-style: none;
+  gap: 20px;
   margin: 0;
   padding: 0;
 }
@@ -56,76 +54,45 @@ body {
 .dropbtn {
   color: white;
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 4px;
   background: none;
   border: none;
   font-size: 16px;
+  padding: 10px;
   cursor: pointer;
 }
 
 .nav-links a:hover,
-.dropdown:hover .dropbtn {
-  background-color: rgba(255, 255, 255, 0.1);
+.dropbtn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
 }
 
-/* Dropdown */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.95);
-  top: 100%;
+  top: 40px;
   left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
   min-width: 200px;
-  z-index: 1001;
   border-radius: 5px;
+  z-index: 1001;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.dropdown-content a {
-  display: block;
-  padding: 10px 15px;
-  color: white;
-  text-decoration: none;
-}
-
-.dropdown-content a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Pääsivun iso logo */
-.logo {
-  width: 150px;
-  display: block;
-  margin: 20px auto;
-}
-
-/* Sisältö */
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  text-align: left;
-}
-
-/* Koodi */
-pre code {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 1em;
-  border-radius: 8px;
-  display: block;
-  white-space: pre-wrap;
-  word-break: break-word;
-  font-family: 'Courier New', monospace;
-  color: #ddd;
-}
-
-/* --- MOBIILI --- */
+/* Mobiili */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -135,19 +102,48 @@ pre code {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
     position: absolute;
     top: 60px;
     left: 0;
+    background-color: rgba(0, 0, 0, 0.95);
   }
 
   .nav-links.active {
     display: flex;
   }
 
-  .nav-links .dropdown:hover .dropdown-content {
+  .dropdown-content {
     position: static;
-    display: block;
   }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropdown .dropbtn::after {
+    content: " ▼";
+  }
+}
+
+/* Sisältöalue */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  text-align: left;
+}
+
+/* Kaavojen laatikko */
+pre code {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1em;
+  border-radius: 8px;
+  display: block;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: 'Courier New', monospace;
+  color: #ddd;
 }
 
