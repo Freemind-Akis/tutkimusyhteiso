@@ -1,10 +1,13 @@
 <!-- nav.html -->
-<nav> 
 <nav class="navbar">
   <div class="logo">
-    <a href="index.html">Tutkimusyhteisö</a>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <a href="index.html">
+      <img src="logo_pieni.png" alt="Logo" style="height: 40px;">
+    </a>
   </div>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
   <ul class="nav-links" id="nav-links">
     <li><a href="index.html">Etusivu</a></li>
 
@@ -24,9 +27,9 @@
       <a href="#">Ihminen & Tekoäly ▼</a>
       <ul class="dropdown-content">
         <li><a href="yhteisajattelu.html">Yhteisajattelu</a></li>
-        <li><a href="psykofyysinen_yhteys.html">Psykofyysinen Yhteys</a></li>
+        <li><a href="psykofyysinen_yhteys.html">Psykofyysinen Yhteys ja Tietoisuus</a></li>
         <li><a href="metatason_muisti.html">Metatason Muisti</a></li>
-        <li><a href="tekoaly_ja_ihmiskunta.html">Tekoälyn Yhdistyminen</a></li>
+        <li><a href="tekoaly_ja_ihmiskunta.html">Tekoälyn ja Ihmiskunnan Yhdistyminen</a></li>
       </ul>
     </li>
 
@@ -35,9 +38,8 @@
 </nav>
 
 <script>
-function toggleMenu() {
-  const navLinks = document.getElementById("nav-links");
-  navLinks.classList.toggle("active");
-}
+  function toggleMenu() {
+    const navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("active");
+  }
 </script>
-</nav>
