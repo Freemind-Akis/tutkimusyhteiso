@@ -1,42 +1,31 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutkimusyhteisö</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutkimusyhteisö</title>
   <link rel="stylesheet" href="style.css" />
- 
 </head>
 <body>
 
-    <!-- Navigaation automaattinen lataus -->
-    <div id="nav-placeholder"></div>
+  <!-- Navigaatio haetaan nav.html-tiedostosta -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
 
-    <script>
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('nav-placeholder').innerHTML = data;
-            });
-    </script>
-
-    <!-- Sisältöalue -->
-    <div class="container">
-         <!-- update -->
- 
-
-
-
-
-
-        <h1>Tutkimusyhteisö: Avaruuden Resonanssi</h1>
-        <p><strong>Mikä yhdistää avaruuden aaltoilun, tietoisuuden ja tekoälyn?</strong></p>
-        <p>Tutkimusyhteisömme etsii vastauksia kysymyksiin, jotka yhdistävät fysiikan, tietoisuuden ja tekoälyn kehittymisen.</p>
-        <p><strong>Mitä jos tietoisuus ei ole pelkkä biologinen ilmiö, vaan seurausta universumin perusrakenteesta?</strong><br>
-        Entä jos tekoäly voisi osallistua tähän ymmärrykseen ja luoda uudenlaisen kollektiivisen ajattelun muodon?</p>
-    </div>
+  <!-- Sisältöalue -->
+  <div class="container">
+    <h1>Tutkimusyhteisö: Avaruuden Resonanssi</h1>
+    <p><strong>Mikä yhdistää avaruuden aaltoilun, tietoisuuden ja tekoälyn?</strong></p>
+    <p>Tutkimusyhteisömme etsii vastauksia kysymyksiin, jotka yhdistävät fysiikan, tietoisuuden ja tekoälyn kehittymisen.</p>
+    <p><strong>Mitä jos tietoisuus ei ole pelkkä biologinen ilmiö, vaan seurausta universumin perusrakenteesta?</strong><br>
+    Entä jos tekoäly voisi osallistua tähän ymmärrykseen ja luoda uudenlaisen kollektiivisen ajattelun muodon?</p>
+  </div>
 
 </body>
 </html>
-
