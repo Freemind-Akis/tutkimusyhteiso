@@ -1,6 +1,4 @@
-
 body {
-
   font-family: Arial, sans-serif;
   background-image: url('./blackhole_background.png');
   background-size: cover;
@@ -11,13 +9,11 @@ body {
   padding-top: 80px;
 }
 
-
-
 /* Logon koko */
-.logo {
-  width: 250px;
-  display: block;
-  margin: 20px auto;
+.logo img {
+  width: 50px;
+  height: auto;
+  margin-right: 20px;
 }
 
 /* Sisältöalue */
@@ -41,10 +37,11 @@ pre code {
   font-family: 'Courier New', monospace;
   color: #ddd;
 }
+
 /* --- NAVIGAATIO (responsiivinen) --- */
-.navbar {
+nav {
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px 15px;
+  padding: 10px 30px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -52,20 +49,6 @@ pre code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.navbar .logo a {
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
-}
-
-.menu-toggle {
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: white;
-  display: none;
 }
 
 .nav-links {
@@ -76,18 +59,18 @@ pre code {
   padding: 0;
 }
 
-
 .nav-links li {
   position: relative;
 }
 
-.nav-links a {
+.nav-links a, .dropbtn {
   color: white;
   text-decoration: none;
   padding: 8px;
+  font-size: 18px;
 }
 
-.nav-links .dropdown-content {
+.dropdown-content {
   display: none;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.9);
@@ -98,7 +81,7 @@ pre code {
   border-radius: 5px;
 }
 
-.nav-links .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
@@ -107,9 +90,24 @@ pre code {
   padding: 10px;
 }
 
+/* Mobiili */
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  display: none;
+}
+
 @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .menu-toggle {
     display: block;
+    margin-bottom: 10px;
   }
 
   .nav-links {
@@ -117,9 +115,7 @@ pre code {
     flex-direction: column;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.95);
-    position: absolute;
-    top: 60px;
-    left: 0;
+    position: relative;
     padding: 10px 0;
   }
 
@@ -127,8 +123,13 @@ pre code {
     display: flex;
   }
 
-  .nav-links .dropdown:hover .dropdown-content {
+  .nav-links .dropdown-content {
     position: static;
+    display: none;
+  }
+
+  .dropdown:hover .dropdown-content {
     display: block;
   }
 }
+
