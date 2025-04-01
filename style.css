@@ -1,3 +1,4 @@
+/* --- YLEINEN TYYLI --- */
 body {
   font-family: Arial, sans-serif;
   background-image: url('./blackhole_background.png');
@@ -9,11 +10,88 @@ body {
   padding-top: 80px;
 }
 
-/* Logon koko */
-.logo img {
-  width: 50px;
+/* Navigaatiopalkki */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo navissa */
+.navbar .logo-small {
+  width: 40px;
   height: auto;
-  margin-right: 20px;
+}
+
+/* Navigaatio-linkit */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin-left: auto;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a,
+.dropbtn {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-links a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.95);
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  z-index: 1001;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Pääsivun logo (iso keskellä) */
+.logo {
+  width: 150px;
+  display: block;
+  margin: 20px auto;
 }
 
 /* Sisältöalue */
@@ -38,98 +116,34 @@ pre code {
   color: #ddd;
 }
 
-/* --- NAVIGAATIO (responsiivinen) --- */
-nav {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px 30px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  position: relative;
-}
-
-.nav-links a, .dropbtn {
-  color: white;
-  text-decoration: none;
-  padding: 8px;
-  font-size: 18px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.9);
-  top: 30px;
-  left: 0;
-  z-index: 1001;
-  min-width: 200px;
-  border-radius: 5px;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content li a {
-  display: block;
-  padding: 10px;
-}
-
 /* Mobiili */
-.menu-toggle {
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: white;
-  display: none;
-}
-
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .menu-toggle {
     display: block;
-    margin-bottom: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    margin-left: auto;
   }
 
   .nav-links {
-    display: none;
     flex-direction: column;
     width: 100%;
+    display: none;
     background-color: rgba(0, 0, 0, 0.95);
-    position: relative;
-    padding: 10px 0;
   }
 
   .nav-links.active {
     display: flex;
   }
 
-  .nav-links .dropdown-content {
+  .nav-links .dropdown:hover .dropdown-content {
     position: static;
-    display: none;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
   }
 }
-
