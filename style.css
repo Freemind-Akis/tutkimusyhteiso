@@ -6,7 +6,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   color: white;
-  text-align: center;
+  margin: 0;
   padding-top: 80px;
 }
 
@@ -15,28 +15,37 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 20px;
   position: fixed;
-  top: 0;
   width: 100%;
+  top: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Logo navissa */
+/* Logo vasemmalle */
 .navbar .logo-small {
   width: 40px;
   height: auto;
 }
 
-/* Navigaatio-linkit */
+/* Sämpylä / menu-nappi */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Linkkilista */
 .nav-links {
   display: flex;
   gap: 20px;
   list-style: none;
-  margin-left: auto;
+  margin: 0;
   padding: 0;
-  align-items: center;
 }
 
 .nav-links li {
@@ -87,14 +96,14 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Pääsivun logo (iso keskellä) */
+/* Pääsivun iso logo */
 .logo {
   width: 150px;
   display: block;
   margin: 20px auto;
 }
 
-/* Sisältöalue */
+/* Sisältö */
 .container {
   max-width: 800px;
   margin: auto;
@@ -104,7 +113,7 @@ body {
   text-align: left;
 }
 
-/* Kaavojen laatikko */
+/* Koodi */
 pre code {
   background-color: rgba(255, 255, 255, 0.05);
   padding: 1em;
@@ -116,27 +125,20 @@ pre code {
   color: #ddd;
 }
 
-/* Mobiili */
+/* --- MOBIILI --- */
 @media (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
   .menu-toggle {
     display: block;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: white;
-    margin-left: auto;
   }
 
   .nav-links {
+    display: none;
     flex-direction: column;
     width: 100%;
-    display: none;
     background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 60px;
+    left: 0;
   }
 
   .nav-links.active {
@@ -145,5 +147,7 @@ pre code {
 
   .nav-links .dropdown:hover .dropdown-content {
     position: static;
+    display: block;
   }
 }
+
