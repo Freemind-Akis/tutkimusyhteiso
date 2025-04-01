@@ -1,5 +1,6 @@
-/* Yleinen tyyli */
+
 body {
+  /* Yleinen tyyli */
   font-family: Arial, sans-serif;
   background-image: url('./blackhole_background.png');
   background-size: cover;
