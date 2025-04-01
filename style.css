@@ -12,6 +12,7 @@ body {
 }
 
 /* Navigaatio */
+/* Navigaatio */
 .navbar {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 20px;
@@ -20,9 +21,14 @@ body {
   top: 0;
   z-index: 1000;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Vasen logo */
+.nav-left {
+  display: flex;
+  align-items: center;
 }
 
 .logo-small {
@@ -31,6 +37,12 @@ body {
   margin-right: 10px;
 }
 
+/* Keskitetty iso logo */
+.logo {
+  width: 250px;
+  display: block;
+  margin: 100px auto 30px auto;
+}
 .menu-toggle {
   display: none;
   background: none;
