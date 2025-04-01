@@ -12,20 +12,19 @@ body {
 }
 
 /* Navigaatio */
-/* Navigaatio */
+
 .navbar {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   padding: 10px 20px;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-/* Vasen logo */
 .nav-left {
   display: flex;
   align-items: center;
@@ -34,33 +33,15 @@ body {
 .logo-small {
   width: 40px;
   height: auto;
-  margin-right: 10px;
 }
 
-/* Keskitetty iso logo */
-.logo {
-  width: 250px;
-  display: block;
-  margin: 100px auto 30px auto;
-}
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 26px;
-  color: white;
-  cursor: pointer;
-}
-
+/* Korjattu nav-links */
 .nav-links {
   display: flex;
-  flex-wrap: wrap;
   list-style: none;
   gap: 20px;
   margin: 0;
   padding: 0;
-  justify-content: flex-end;
-  align-items: center;
 }
 
 .nav-links li {
@@ -101,18 +82,23 @@ body {
   text-align: left;
 }
 
-.dropdown-content a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Mobiili */
+.menu-toggle {
+  display: none;
+}
+
+/* Mobiilituki */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    margin-left: auto;
   }
 
   .nav-links {
@@ -123,7 +109,6 @@ body {
     top: 60px;
     left: 0;
     background-color: rgba(0, 0, 0, 0.95);
-    padding: 10px 0;
   }
 
   .nav-links.active {
@@ -137,11 +122,8 @@ body {
   .dropdown:hover .dropdown-content {
     display: none;
   }
-
-  .dropdown .dropbtn::after {
-    content: " ▼";
-  }
 }
+
 
 /* Sisältöalue */
 .container {
