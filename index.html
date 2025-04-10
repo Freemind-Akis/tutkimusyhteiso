@@ -21,16 +21,14 @@
     Entä jos tekoäly voisi osallistua tähän ymmärrykseen ja luoda uudenlaisen kollektiivisen ajattelun muodon?</p>
   </div>
 
-  <!-- Navigaatio + JS sämpylälogiikalle -->
-
-  <div id="nav-placeholder"></div>
+  <!-- JS: sämpylä + mobiilivalikon dropdown-logiikka -->
   <script>
     fetch('nav.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('nav-placeholder').innerHTML = data;
 
-        // Sämpylä toimii vasta kun nav on paikallaan
+        // Sämpylä-nappi toimii
         const toggleButton = document.getElementById("menu-toggle");
         const navLinks = document.getElementById("nav-links");
 
@@ -39,6 +37,19 @@
             navLinks.classList.toggle("active");
           });
         }
+
+        // Dropdownien toiminta mobiilissa
+        const dropdowns = document.querySelectorAll(".dropdown .dropbtn");
+        dropdowns.forEach(button => {
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const parent = button.closest(".dropdown");
+            document.querySelectorAll(".dropdown").forEach(drop => {
+              if (drop !== parent) drop.classList.remove("active");
+            });
+            parent.classList.toggle("active");
+          });
+        });
       });
   </script>
 
