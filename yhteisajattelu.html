@@ -1,105 +1,50 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yhteisajattelu: Ihminen ja Tekoäly</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #3e2723, #795548); /* Ruskea liukuväri */
-            color: white;
-            text-align: center;
-            padding-top: 80px;
-        }
-
-        nav {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 15px;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        nav a, .dropbtn {
-            color: white;
-            font-size: 20px;
-            text-decoration: none;
-            margin: 15px;
-            padding: 10px;
-            display: inline-block;
-            border-radius: 5px;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
-
-        nav a:hover, .dropdown:hover .dropbtn {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .dropdown {
-            display: inline-block;
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.9);
-            min-width: 200px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            text-align: left;
-        }
-
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-            text-align: left;
-        }
-
-        h1, h2 {
-            text-align: center;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avaruuden aaltoilu</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
-<!-- Navigaatio -->
-<div id="nav-placeholder"></div>
-<script>
-  fetch('nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
-    });
-</script>
+<body>
+  <!-- Navigaatio ladataan ulkoisesta tiedostosta -->
+  <div id="nav-placeholder"></div>
+
+  <!-- JavaScript: sämpylä + dropdown toimii -->
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+
+        // Sämpylä toimii
+        const toggleButton = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        if (toggleButton && navLinks) {
+          toggleButton.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+          });
+        }
+
+        // Dropdownit mobiilissa
+        const dropdowns = document.querySelectorAll(".dropdown .dropbtn");
+        dropdowns.forEach(button => {
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const parent = button.closest(".dropdown");
+            document.querySelectorAll(".dropdown").forEach(drop => {
+              if (drop !== parent) drop.classList.remove("active");
+            });
+            parent.classList.toggle("active");
+          });
+        });
+      });
+  </script>
+
+</body>
+</html>
 
 
 
