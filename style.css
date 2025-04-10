@@ -12,7 +12,6 @@ body {
 }
 
 /* Navigaatio */
-
 .navbar {
   background-color: rgba(0, 0, 0, 0.85);
   padding: 10px 20px;
@@ -35,7 +34,23 @@ body {
   height: auto;
 }
 
-/* Korjattu nav-links */
+/* Jos käytät keskellä sivua erillistä logoa */
+.logo-center {
+  max-width: 200px;
+  width: 80%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .logo-center {
+    max-width: 140px;
+    margin-top: 10px;
+  }
+}
+
+/* Linkkityyli */
 .nav-links {
   display: flex;
   list-style: none;
@@ -86,6 +101,7 @@ body {
   display: block;
 }
 
+/* Sämpylävalikko-painike */
 .menu-toggle {
   display: none;
 }
@@ -99,51 +115,4 @@ body {
     border: none;
     color: white;
     margin-left: auto;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.95);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .dropdown-content {
-    position: static;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: none;
-  }
-}
-
-
-/* Sisältöalue */
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  text-align: left;
-}
-
-/* Kaavojen laatikko */
-pre code {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 1em;
-  border-radius: 8px;
-  display: block;
-  white-space: pre-wrap;
-  word-break: break-word;
-  font-family: 'Courier New', monospace;
-  color: #ddd;
-}
-
+    z-index:
