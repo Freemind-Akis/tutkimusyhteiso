@@ -119,4 +119,36 @@ body {
     border: none;
     color: white;
     margin-left: auto;
-    z-index:
+    z-index:1002;
+  cursor: pointer;
+}
+
+/* Mobiilissa piilotetaan nav-links oletuksena */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+/* Dropdownit mobiilissa – poistetaan hover-toiminta */
+.dropdown-content {
+  position: static;
+  display: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: none; /* Estetään hover mobiilissa */
+}
+
+.dropdown.active .dropdown-content {
+  display: block; /* Jos käytetään JS:llä lisättävää .active-luokkaa */
+}
+
