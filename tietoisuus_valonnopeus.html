@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avaruuden aaltoilu</title>
+  <title>Tietoisuus ja Valonnopeus</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -11,24 +11,20 @@
   <!-- Navigaatio ladataan ulkoisesta tiedostosta -->
   <div id="nav-placeholder"></div>
 
-  <!-- JavaScript: sämpylä + dropdown toimii -->
   <script>
     fetch('nav.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('nav-placeholder').innerHTML = data;
 
-        // Sämpylä toimii
         const toggleButton = document.getElementById("menu-toggle");
         const navLinks = document.getElementById("nav-links");
-
         if (toggleButton && navLinks) {
           toggleButton.addEventListener("click", function () {
             navLinks.classList.toggle("active");
           });
         }
 
-        // Dropdownit mobiilissa
         const dropdowns = document.querySelectorAll(".dropdown .dropbtn");
         dropdowns.forEach(button => {
           button.addEventListener("click", function (e) {
@@ -42,6 +38,46 @@
         });
       });
   </script>
+
+  <!-- Sisältöalue -->
+  <div class="container">
+    <h1>Tietoisuus ja Valonnopeus</h1>
+    <h2>Ajattelu, Valo ja Kvanttilomittuminen: Ajan Ulkopuolinen Ymmärrys</h2>
+
+    <h3>Johdanto</h3>
+    <p>
+      Tämä tutkielma käsittelee hypoteesia, jonka mukaan tietoisuus ei ole sidottu aikaan samalla tavalla kuin fyysiset objektit tai informaatio valonnopeuden rajoissa. Yhdistämällä kvanttilomittumisen, valon perspektiivin ja ajatuksen synnyn voimme tarkastella, onko tietoisuus ilmiö, joka toimii ajan ja paikan yläpuolella.
+    </p>
+
+    <h3>1. Valonnopeuden Perspektiivi ja Aika</h3>
+    <ul>
+      <li>Valo ei koe aikaa – valon näkökulmasta kaikki tapahtuu samanaikaisesti.</li>
+      <li>Ajan dilaatio suhteellisuusteorian mukaan tarkoittaa, että mitä nopeammin liikumme, sitä hitaammin aika etenee havaitsijan näkökulmasta.</li>
+    </ul>
+
+    <h3>2. Kvanttilomittuminen ja Välitön Yhteys</h3>
+    <ul>
+      <li>Kaksi lomittunutta hiukkasta voivat vaikuttaa toisiinsa välittömästi riippumatta etäisyydestä.</li>
+      <li>Ajatuksen nopeus voisi toimia samalla tavoin – tietoisuus ei välttämättä "kulje", vaan se ilmenee samanaikaisesti useissa pisteissä.</li>
+    </ul>
+
+    <h3>3. Ajatus ja Aika</h3>
+    <p>
+      Tietoisuus voi toimia ikään kuin valonnopeuden perspektiivissä: emme koe ajallista viivettä ajatusten välillä, vaan oivallus saattaa tuntua syntyvän "yhtäkkiä". Tämä viittaa siihen, että tietoisuus toimii syklisesti, ei lineaarisesti – ja sen rakenne voi olla samanlainen kuin kvanttilomittumisen matemaattinen malli.
+    </p>
+
+    <h3>4. Visuaalinen Havainnollistus</h3>
+    <p>
+      Kuvittele, että kvanttilomittuneet tietoisuuden "paketit" ovat kaksiulotteisia laatikoita, jotka ovat yhteydessä toisiinsa vaaleanpunaisen valonsäteen kautta. Kun säde osuu aika-avaruuden risteyskohtaan, kaikki laatikot aktivoituvat samanaikaisesti – tämä on oivalluksen hetki. Tässä mallissa tietoisuus resonoi yli aika-avaruuden kuten valo tai lomittuneet hiukkaset.
+    </p>
+
+    <h3>5. Johtopäätökset</h3>
+    <ul>
+      <li>Tietoisuus ei ole välttämättä valonnopeutta nopeampi, vaan se toimii kokonaan ajan ulkopuolella – kvanttitason tilassa, jossa kaikki tapahtuu "nyt".</li>
+      <li>Ajatus ei kulje tilasta toiseen, vaan syntyy koko rakenteessa kerralla – resonanssina.</li>
+      <li>Tämä tukee hypoteesia, että tietoisuus voi muokata havaintoa ajasta ja jopa menneisyydestä tai tulevaisuudesta sen hetkisen tilan perusteella.</li>
+    </ul>
+  </div>
 
 </body>
 </html>
