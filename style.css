@@ -151,4 +151,14 @@ body {
 .dropdown.active .dropdown-content {
   display: block; /* Jos käytetään JS:llä lisättävää .active-luokkaa */
 }
+  /* Mobiilin taustan himmennys, kun valikko auki */
+body.overlay-active::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); /* säädä tummuutta halutessasi */
+  z-index: 999;
+  pointer-events: none;
+}
+
 
