@@ -151,6 +151,7 @@ body {
 .dropdown.active .dropdown-content {
   display: block; /* Jos käytetään JS:llä lisättävää .active-luokkaa */
 }
+  /* PÄIVITYS! */
   /* Mobiilin taustan himmennys, kun valikko auki */
 body.overlay-active::before {
   content: "";
