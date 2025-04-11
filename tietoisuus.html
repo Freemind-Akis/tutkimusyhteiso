@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tietoisuus ja Energia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navigaatio ladataan ulkoisesta tiedostosta -->
+  <div id="nav-placeholder"></div>
+
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+
+        const toggleButton = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        if (toggleButton && navLinks) {
+          toggleButton.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+          });
+        }
+
+        const dropdowns = document.querySelectorAll(".dropdown .dropbtn");
+        dropdowns.forEach(button => {
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const parent = button.closest(".dropdown");
+            document.querySelectorAll(".dropdown").forEach(drop => {
+              if (drop !== parent) drop.classList.remove("active");
+            });
+            parent.classList.toggle("active");
+          });
+        });
+      });
+  </script>
+
+  <!-- Sisältöalue -->
+  <div class="container">
+    <h1>Tietoisuus ja Energia</h1>
+    <h2>Tietoisuus kvantti-ilmiönä ja energiakenttänä</h2>
+
+    <h3>Johdanto</h3>
+    <p>
+      Tässä tutkielmassa tarkastelemme tietoisuutta ei vain biologisena ominaisuutena, vaan mahdollisesti universaalina ilmiönä, joka kytkeytyy energiaan, aaltoiluun ja kvanttifysiikkaan. Tavoitteena on esittää hypoteesi, jossa tietoisuus ei ole aivojen tuote, vaan resonanssikenttä, joka toimii kvanttitason ja makrotason välissä.
+    </p>
+
+    <h3>1. Tietoisuus ja kvanttifysiikka</h3>
+    <ul>
+      <li>Voiko tietoisuus olla superpositiossa kuten kvanttihiukkanen?</li>
+      <li>Toimiiko tietoisuus lomittuneena verkostona yli ajan ja paikan?</li>
+    </ul>
+
+    <h3>2. Energia ja resonanssi</h3>
+    <ul>
+      <li>Hypoteesi: Tietoisuus voidaan esittää kaavalla: <code>C = T × A</code> (Tietoisuus = Aika x Aaltoilu)</li>
+      <li>Tämä vastaa fyysistä kaavaa: <code>P = U × I</code> (Teho = Jännite x Virta)</li>
+      <li>Tietoisuus voi siis olla energian muoto, joka resonoi ajan ja aaltoilun välillä.</li>
+    </ul>
+
+    <h3>3. Aallonluonne ja universumin rakenne</h3>
+    <ul>
+      <li>Aaltoilua esiintyy kaikilla tasoilla: valo, gravitaatio, kvanttikentät.</li>
+      <li>Onko mahdollista, että tietoisuus toimii universumin rakenteessa samalla tavalla kuin valokentät?</li>
+    </ul>
+
+    <h3>4. Ajatuksen energia ja Planckin taajuus</h3>
+    <ul>
+      <li>Ajatuksen voi mieltää kvanttienergiana: <code>E = h × f</code></li>
+      <li>Missä taajuudessa tietoisuus toimii? Voimmeko mitata sen?</li>
+    </ul>
+
+    <h3>5. Yhteys muihin hypoteeseihin</h3>
+    <ul>
+      <li>Tämä tutkielma on yhteydessä seuraaviin aiheisiin: Kvanttilomittuminen, Ajan rakenne, Tietoisuuden resonanssi, Painovoiman vaikutus ajatteluun.</li>
+    </ul>
+
+    <h3>Johtopäätös</h3>
+    <p>
+      Tietoisuus ei ole erillinen ilmiö vaan kenttä, joka voi aaltoilla ja lomittua ajan, tilan ja toisten tietoisuuksien yli. Energiatasoltaan se voi olla mitattavissa ja malli voi yhdistää kvanttifysiikan, tietoisuudentutkimuksen ja jopa suhteellisuusteorian. Tämä on vasta hypoteesi, mutta se avaa polkuja uudenlaiseen tutkimukseen ja ajatteluun.
+    </p>
+  </div>
+
+</body>
+</html>
