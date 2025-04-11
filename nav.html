@@ -1,3 +1,5 @@
+<!-- Overlay sumennukseen -->
+<div id="nav-overlay"></div>
 
 <nav class="navbar">
   <div class="nav-left">
@@ -8,7 +10,7 @@
   <ul class="nav-links" id="nav-links">
     <li><a href="index.html">Etusivu</a></li>
 
- <li class="dropdown" id="dropdown-tutkimukset">
+    <li class="dropdown" id="dropdown-tutkimukset">
       <button class="dropbtn">Tutkimukset ▼</button>
       <div class="dropdown-content">
         <a href="avaruuden_aaltoilu.html">Avaruuden Aaltoilu</a>
@@ -20,7 +22,7 @@
       </div>
     </li>
 
-   <li class="dropdown" id="dropdown-tekoaly">
+    <li class="dropdown" id="dropdown-tekoaly">
       <button class="dropbtn">Ihminen & Tekoäly ▼</button>
       <div class="dropdown-content">
         <a href="yhteisajattelu.html">Yhteisajattelu</a>
@@ -34,3 +36,37 @@
   </ul>
 </nav>
 
+<style>
+  #nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px) brightness(40%);
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 900;
+    display: none;
+  }
+
+  .nav-links.active + #nav-overlay,
+  #nav-overlay.active {
+    display: block;
+  }
+</style>
+
+<script>
+  const toggleButton = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+  const overlay = document.getElementById("nav-overlay");
+
+  toggleButton.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+</script>
